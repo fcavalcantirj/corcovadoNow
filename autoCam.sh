@@ -13,5 +13,5 @@ while true; do
 		sudo cp /home/pi/corcovadoStream/outputs/$DATETIME.jpg /usr/share/nginx/www/last.jpg
 	fi
 	#sleep 3600
-	sleep 5000
+	sleep 500
 done
