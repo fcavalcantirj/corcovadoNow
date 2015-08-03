@@ -4,9 +4,9 @@ while true; do
 	DATE=`date +%Y%m%d`
 	HOUR=`date +%H`
 	if [[ $HOUR -ge 10 && $HOUR -le 21 ]]; then
-		raspistill -q 100 -rot 270 -ex auto -o $DATETIME.jpg
+		sudo raspistill -q 100 -rot 270 -ex auto -o /home/pi/corcovadoStream/outputs/$DATETIME.jpg
 	else
-		raspistill -q 100 -rot 270 -ex night -o $DATETIME.jpg
+		sudo raspistill -q 100 -rot 270 -ex night -o /home/pi/corcovadoStream/outputs/$DATETIME.jpg
 	fi
 	sleep 3600
 done
