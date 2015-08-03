@@ -1,0 +1,23 @@
+#!/bin/bash
+# /etc/init.d/autoCam
+
+### BEGIN INIT INFO
+### END INIT INFO
+
+
+case "$1" in 
+    start)
+        echo "Starting autoCam"
+        sudo ./home/pi/corcovadoStream/autocam.sh &
+        ;;
+    stop)
+        echo "Stopping autoCam"
+        killall raspistill
+        ;;
+    *)
+        echo "Usage: /etc/init.d/autoCam start|stop"
+        exit 1
+        ;;
+esac
+
+exit 0

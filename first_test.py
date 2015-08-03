@@ -3,6 +3,7 @@ import picamera
 
 with picamera.PiCamera() as camera:
     camera.start_preview()
+    camera.rotation = 270
     time.sleep(2)
     for filename in camera.capture_continuous('img{counter:03d}.jpg'):
         print('Captured %s' % filename)
