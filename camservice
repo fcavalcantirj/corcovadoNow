@@ -1,5 +1,5 @@
 #!/bin/bash
-# /etc/init.d/autoCam
+# /etc/init.d/camservice
 
 ### BEGIN INIT INFO
 ### END INIT INFO
@@ -7,15 +7,15 @@
 
 case "$1" in 
     start)
-        echo "Starting autoCam"
+        echo "Starting camservice"
         sudo ./home/pi/corcovadoStream/autocam.sh &
         ;;
     stop)
-        echo "Stopping autoCam"
-        killall raspistill
+        echo "Stopping camservice"
+        killall autocam
         ;;
     *)
-        echo "Usage: /etc/init.d/autoCam start|stop"
+        echo "Usage: /etc/init.d/camservice start|stop"
         exit 1
         ;;
 esac
