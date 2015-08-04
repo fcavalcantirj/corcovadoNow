@@ -8,6 +8,7 @@
 case "$1" in 
     start)
         echo "Starting camservice"
+        ./home/pi/ngrok authtoken 46b4Uk6yjGbVxum9E5WSA_5BTdsiUqfCtRUhSy11mP4
         ./home/pi/ngrok http 80 &
         sudo nohup ./home/pi/corcovadoStream/autoCam.sh &
         ;;
