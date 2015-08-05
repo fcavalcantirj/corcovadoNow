@@ -20,6 +20,8 @@ case "$1" in
         echo "Starting camservice"
         #sudo ./home/pi/ngrok authtoken 46b4Uk6yjGbVxum9E5WSA_5BTdsiUqfCtRUhSy11mP4
         #sudo nohup /home/pi/ngrok http 80 &
+        sudo rm -rf /home/pi/corcovadoStream/outputs/*.jpg
+        wait
         sudo nohup /home/pi/corcovadoStream/autoCam.sh &
         ;;
     stop)
