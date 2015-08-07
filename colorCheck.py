@@ -1,6 +1,7 @@
 #!/usr/bin/python -W ignore::DeprecationWarning
 from PIL import Image
 from twitter import *
+import random
 
 im = Image.open("../corcovadoStream/outputs/last.jpg")
 pix = im.load()
@@ -17,9 +18,9 @@ diffG = 255 - colors[1]
 diffB = 255 - colors[2]
 
 sentences = ["Check me out...I'm not white!","Check me out...I have a different color!","hummm...I think I`m different today!!!"]
-random.shuffle(sentences)
 
 if diffG >= maxDiffG or diffB >= maxDiffB:
+	random.shuffle(sentences)
 	print 'diffR=' + str(diffR)
 	print 'diffG=' + str(diffG)
 	print 'diffB=' + str(diffB)
