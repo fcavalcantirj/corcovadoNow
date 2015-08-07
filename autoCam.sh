@@ -5,7 +5,7 @@ while true; do
 	HOUR=`date +%H`
 	echo $DATETIME
 	#Last click coordinates: 1264, 834
-	if [[ $HOUR -ge 10 && $HOUR -le 20 ]]; then
+	if [[ $HOUR -ge 10 && $HOUR -le 21 ]]; then
 		#sudo raspistill -q 100 -rot 270 -ex auto -o /home/pi/corcovadoStream/outputs/$DATETIME.jpg
 		sudo raspistill -q 100 -rot 270 -ex auto -o /home/pi/corcovadoStream/outputs/last.jpg
 		wait
