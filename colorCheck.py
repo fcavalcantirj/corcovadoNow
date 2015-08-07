@@ -14,7 +14,7 @@ access_token_secret=os.environ.get('access_token_secret')
 
 print pix[1264, 834]
 
-t = Twitter(auth=OAuth(access_token_secret, access_token_key, consumer_key, consumer_secret))
+t = Twitter(auth=OAuth(access_token_secret, access_token_key, consumer_secret, consumer_key))
 t.statuses.update(status='#myfirstweetfromraspberrypi')
 
 colors = pix[1264, 834]
