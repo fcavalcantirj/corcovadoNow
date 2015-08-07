@@ -18,3 +18,4 @@ if diffG >= maxDiff or diffB >= maxDiff:
 
 	t = Twitter(auth=OAuth('3406707393-MGD1EGJrXGeItx4HyQPEt0bm67Qi2ABYsYgid2t', '4MjtcETEvyFyqIKN1Twz9TOrPPwPFCnu0UhR0Gw9MeerW', 'CGqzQPkZ0kKH9mOGvixkhtny1', 'GBjCXaXMRD5c5L2rBzUYAMsiEV5ues3BIHe7rJ1SL4qCdBxX0B'))
 	t.statuses.update(status="Check me out...I`m not white!")
+	print 'just tweeted'
