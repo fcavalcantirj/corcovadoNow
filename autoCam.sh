@@ -16,5 +16,5 @@ while true; do
 		scp -o StrictHostKeyChecking=no -i /home/pi/fcavalcanti.pem /home/pi/corcovadoStream/outputs/$DATETIME.jpg ec2-user@52.26.112.248:/usr/local/nginx/html/corcovadoStream-html/assets/img/last.jpg
 		wait
 	fi
-	sleep 90
+	sleep 45
 done
