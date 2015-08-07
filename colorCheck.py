@@ -5,7 +5,9 @@ import random
 
 im = Image.open("../corcovadoStream/outputs/last.jpg")
 pix = im.load()
-#print pix[1264, 834]
+
+print pix[1264, 834]
+
 colors = pix[1264, 834]
 maxDiffG = 50
 maxDiffB = 90
