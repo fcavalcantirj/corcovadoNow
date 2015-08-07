@@ -14,9 +14,6 @@ access_token_secret=os.environ.get('access_token_secret')
 
 print pix[1264, 834]
 
-t = Twitter(auth=OAuth(access_token_key, access_token_secret, consumer_key, consumer_secret))
-t.statuses.update(status='#myfirstweetfromraspberrypi')
-
 colors = pix[1264, 834]
 maxDiffG = 50
 maxDiffB = 90
@@ -41,6 +38,6 @@ if diffG >= maxDiffG or diffB >= maxDiffB:
 	print 'diffR=' + str(diffR)
 	print 'diffG=' + str(diffG)
 	print 'diffB=' + str(diffB)
-	#t = Twitter(auth=OAuth(consumer_key, consumer_secret, access_token_key, access_token_secret))
-	#t.statuses.update(status=str(sentences[0]))
+	t = Twitter(auth=OAuth(access_token_key, access_token_secret, consumer_key, consumer_secret))
+	t.statuses.update(status=str(sentences[0]))
 	print 'just tweeted'
