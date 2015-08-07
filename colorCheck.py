@@ -15,8 +15,8 @@ access_token_secret=os.environ.get('access_token_secret')
 print pix[1264, 834]
 
 colors = pix[1264, 834]
-maxDiffG = 50
-maxDiffB = 90
+maxDiffG = 150
+maxDiffB = 150
 maxDiffR = 90
 
 defaultColor = 255
@@ -30,6 +30,10 @@ diffB = 255 - colors[2]
 #diffR=147
 #diffG=158
 #diffB=162
+#as 7 e pouco
+#diffR=62
+#diffG=120
+#diffB=122
 
 sentences = ["Check me out...I'm not white!","Check me out...I have a different color!","hummm...I think I`m different today!!!", "I'm feeling different today!!!", "Hey...I might have a strange color now..."]
 
