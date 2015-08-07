@@ -41,6 +41,6 @@ if diffG >= maxDiffG or diffB >= maxDiffB:
 	print 'diffR=' + str(diffR)
 	print 'diffG=' + str(diffG)
 	print 'diffB=' + str(diffB)
-	t = Twitter(auth=OAuth(consumer_key, consumer_secret, access_token_key, access_token_secret))
-	t.statuses.update(status=str(sentences[0]))
+	#t = Twitter(auth=OAuth(consumer_key, consumer_secret, access_token_key, access_token_secret))
+	#t.statuses.update(status=str(sentences[0]))
 	print 'just tweeted'
