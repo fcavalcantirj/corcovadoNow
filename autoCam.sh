@@ -9,7 +9,7 @@ while true; do
 		sudo raspistill -q 100 -rot 270 -ex auto -o /home/pi/corcovadoStream/outputs/last.jpg
 		wait
 		#sudo cp /home/pi/corcovadoStream/outputs/$DATETIME.jpg /usr/share/nginx/www/last.jpg
-		scp -o StrictHostKeyChecking=no -i /home/pi/fcavalcanti.pem /home/pi/corcovadoStream/outputs/$DATETIME.jpg ec2-user@52.26.112.248:/usr/local/nginx/html/corcovadoStream-html/assets/img/last.jpg
+		scp -o StrictHostKeyChecking=no -i /home/pi/fcavalcanti.pem /home/pi/corcovadoStream/outputs/last.jpg ec2-user@52.26.112.248:/usr/local/nginx/html/corcovadoStream-html/assets/img/last.jpg
 		wait
 		python ../twitter-master/colorCheck.py
 		#sudo rm -rf /home/pi/corcovadoStream/outputs/$DATETIME.jpg
@@ -19,7 +19,7 @@ while true; do
 		sudo raspistill -q 100 -rot 270 -ex night -o /home/pi/corcovadoStream/outputs/last.jpg
 		wait
 		#sudo cp /home/pi/corcovadoStream/outputs/$DATETIME.jpg /usr/share/nginx/www/last.jpg
-		scp -o StrictHostKeyChecking=no -i /home/pi/fcavalcanti.pem /home/pi/corcovadoStream/outputs/$DATETIME.jpg ec2-user@52.26.112.248:/usr/local/nginx/html/corcovadoStream-html/assets/img/last.jpg
+		scp -o StrictHostKeyChecking=no -i /home/pi/fcavalcanti.pem /home/pi/corcovadoStream/outputs/last.jpg ec2-user@52.26.112.248:/usr/local/nginx/html/corcovadoStream-html/assets/img/last.jpg
 		wait
 		python ../twitter-master/colorCheck.py
 		#sudo rm -rf /home/pi/corcovadoStream/outputs/$DATETIME.jpg
