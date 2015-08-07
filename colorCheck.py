@@ -2,7 +2,7 @@
 from PIL import Image
 from twitter import *
 
-im = Image.open("outputs/last.jpg")
+im = Image.open("../corcovadoStream/outputs/last.jpg")
 pix = im.load()
 #print pix[1264, 834]
 colors = pix[1264, 834]
