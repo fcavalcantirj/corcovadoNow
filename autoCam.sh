@@ -20,9 +20,9 @@ while true; do
 	HOUR=`date +%H`
 	echo $DATETIME
 	#Last click coordinates: 1264, 834
-	if [[ $HOUR -ge 10 && $HOUR -le 20 ]]; then
+	if [[ $HOUR -ge 10 && $HOUR -lt 20 ]]; then
 		#sudo raspistill -q 100 -rot 270 -ex auto -o /home/pi/corcovadoNow/outputs/$DATETIME.jpg
-		sudo raspistill -q 75 -rot 270 -ex spotlight --awb horizon --nopreview -w 1275 -h 650 --thumb none --exif none --encoding jpg -o $OUTPUT_PATH
+		sudo raspistill -q 75 -rot 270 --nopreview -w 1275 -h 650 --thumb none --exif none --encoding jpg -o $OUTPUT_PATH
 		wait
 		#sudo cp /home/pi/corcovadoNow/outputs/$DATETIME.jpg /usr/share/nginx/www/last.jpg
 		scp -o StrictHostKeyChecking=no -i /home/pi/fcavalcanti.pem /home/pi/corcovadoNow/outputs/last.jpg $REMOTE_SERVER_PATH
@@ -31,7 +31,7 @@ while true; do
 		#wait
 	else
 		#sudo raspistill -q 100 -rot 270 -ex night -o /home/pi/corcovadoNow/outputs/$DATETIME.jpg
-		sudo raspistill -q 75 -rot 270 -ev -10 -ex night --awb horizon --nopreview -w 1275 -h 650 --thumb none --exif none --encoding jpg -o $OUTPUT_PATH
+		sudo raspistill -q 75 -rot 270 --drc low -ev -10 -ex verylong --awb horizon --nopreview -w 1275 -h 650 --thumb none --exif none --encoding jpg -o $OUTPUT_PATH
 		wait
 		#sudo cp /home/pi/corcovadoNow/outputs/$DATETIME.jpg /usr/share/nginx/www/last.jpg
 		scp -o StrictHostKeyChecking=no -i /home/pi/fcavalcanti.pem /home/pi/corcovadoNow/outputs/last.jpg $REMOTE_SERVER_PATH
