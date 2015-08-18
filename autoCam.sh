@@ -12,7 +12,7 @@
 #--encoding jpg
 #-p 100,100,300,200 -change preview values
 ########################
-REMOTE_SERVER_PATH=ec2-user@52.26.112.248:/usr/local/nginx/html/corcovadoStream-html/assets/img/last.jpg
+REMOTE_SERVER_PATH=ec2-user@52.26.112.248:/usr/local/nginx/html/corcovadoNow/imgs/last.jpg
 OUTPUT_PATH=/home/pi/corcovadoNow/outputs/last.jpg
 while true; do 
 	DATETIME=$(date +"%Y-%m-%d_%H%M")
